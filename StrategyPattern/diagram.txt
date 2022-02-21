@@ -1,0 +1,21 @@
+@startuml
+abstract class Duck {
+- flyBehavior: FlyBehavior
++ performFly()
+}
+
+class DuckType2 extends Duck {
++ performFly()
+}
+
+interface FlyBehavior {
+- fly()
+}
+
+class FlyWithWings implements FlyBehavior{
++ fly()
+}
+
+DuckType2 --> FlyWithWings
+
+@enduml

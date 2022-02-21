@@ -1,0 +1,9 @@
+Cat Tiger
+Cat Smokey
+Cat Misty
+Dog Spot yes
+Dog Tiny yes
+Dog Athena yes
+Fish Bubbles 3
+Fish Comet 1
+Fish Flash 5

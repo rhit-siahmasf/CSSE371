@@ -1,0 +1,39 @@
+@startuml
+class Main{
++main(args: String[]): void
+}
+
+abstract Integrator {
+#integrate(): void
++{abstract}modifyStepSize(): void
++{abstract}multiplier(): void
++areaUnderTheCurveHook(): void
+}
+
+class TrapezoidIntegration {
++modifyStepSize(): void
++multiplier(): void
+}
+
+class SimpsonIntegration {
++modifyStepSize(): void
++multiplier(): void
+}
+
+class Simpson38Integration {
++modifyStepSize(): void
++multiplier(): void
+}
+
+class BooleIntegration {
++modifyStepSize(): void
++multiplier(): void
+}
+
+Main ..> Integrator
+Integrator <|-- TrapezoidIntegration 
+Integrator <|-- Simpson38Integration 
+Integrator <|-- SimpsonIntegration 
+Integrator <|-- BooleIntegration
+TrapezoidIntegration <|-- AreaUnderTheCurve
+@enduml

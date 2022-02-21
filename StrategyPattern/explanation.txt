@@ -1,0 +1,7 @@
+defines a family of algorithms (grouping of algorithms that do or are related tothe same idea)
+and encapsulates each one (wraps a class around the functionality)
+and makes them interchangeable (likely uses an interface to swap out behaviors)
+
+MAIN POINT!!!
+lets the algorithm vary independently from
+clients that use it

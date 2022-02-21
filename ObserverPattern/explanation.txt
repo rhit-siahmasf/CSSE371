@@ -1,0 +1,4 @@
+defines a 1-to-many dependency 
+so that when ONE object changes state, all of its dependents are
+notified and UPDATED automatically
+(push vs. pull)

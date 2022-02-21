@@ -1,0 +1,24 @@
+@startuml
+
+abstract class Coffee {
++ description
++ cost
+}
+
+class Espresso extends Coffee {
++ cost
+}
+
+abstract class CoffeeDecorator extends Coffee {
+
+}
+
+class WithMilk extends CoffeeDecorator {
++ cost
+}
+
+class WithSugar extends CoffeeDecorator {
++ cost
+}
+
+@enduml

@@ -1,0 +1,8 @@
+Attaches additional responsibilities to an object
+DYNAMICALLY.
+
+Decorators provide a flexible alternative to subclassing 
+for extending functionality.
+
+Impersonate a class w/o letting other subclasses
+know all the information that is irrelevant to them.

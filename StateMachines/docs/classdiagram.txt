@@ -1,0 +1,52 @@
+@startuml
+namespace lib.StateMachine #DDDDDD {
+
+class Transition {
+- currentState: T
+- nextChar: char
+- nextState: T
+- sideEffect: SideEffect
+- Transition(T cs, char nc, T ns, SideEfect se)
+}
+
+interface SideEffect {
+- applySideEffect(): boolean
+}
+
+interface StateMachine {
+- transitions: List<Transition>
+- createNewStateMachine(): StateMachine
+- sendState(List<T> states): boolean
+}
+
+StateMachine --* Transition
+Transition --> SideEffect
+}
+
+class WriteToFile implements lib.StateMachine.SideEffect {
+- fileName: String
+- file: FileOutputStream
+- appendToEnd: boolean
+- applySideEffect()
+}
+
+class ScreamAtUser implements lib.StateMachine.SideEffect {
+- username: String
+- textToScream: String
+- applySideEffect()
+}
+
+class FindAbcAndPrintThings implements lib.StateMachine.StateMachine {
+- transitions: LinkedList<Transition>
+- FindAbcAndPrintThings(LinkedList<Transition> transitions)
+- createNewStateMachine(): FindAbcAndPrintThings
+- sendState(List<T> state)
+}
+
+class SumOfDigitsEquals3 implements lib.StateMachine.StateMachine {
+- transitions: LinkedList<Transition>
+- SumOfDigitsEquals3(LinkedList<Transition> transitions)
+- createNewStateMachine(): SumOfDigitsEquals3
+- sendState(List<T> state)
+}
+@enduml

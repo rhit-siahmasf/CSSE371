@@ -1,0 +1,26 @@
+// EnemyAttacker --> Target
+// EnemyRobotAdapter --> Adapter
+// EnemyRobot --> Adaptee
+
+@startuml
+
+interface EnemyAttacker {
++ fireWeapon(): void
++ driveForward(): void
++ assignDriver(driver: String): void
+}
+
+class EnemyRobotAdapter [
++ EnemyRobot
++ fireWeapon(): void
++ driveForward(): void
++ assignDriver(driver: String): void
+}
+
+class EnemnyRobot {
++ smashWithHand(): void
++ walkForward(): void
++ reactToHuman(human: String):void
+}
+
+@enduml

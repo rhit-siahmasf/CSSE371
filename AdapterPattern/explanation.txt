@@ -1,0 +1,8 @@
+allows 2 incompatible interfaces to work together
+
+used when the client EXPECTS TO USE A TARGET INTERFACE
+
+allows the use of the available interface and the Target interface
+
+any class can work together as long as the Adapter solves the issue that all classes must
+implement every method defined by the shared interface

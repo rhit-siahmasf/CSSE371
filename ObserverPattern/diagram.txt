@@ -1,0 +1,33 @@
+@startuml
+
+interface Subject {
+- registerObserver()
+- removeObserver()
+- notifyObservers()
+}
+
+interface Observer {
+update()
+}
+
+class CurrentConditionObserver implements Observer {
++ temp: int
++ humidity: int
++ update()
+}
+
+class ForecastConditionsObserver implements Observer {
++ temp: int
++ humidity: int
++ update()
++ lastSevenDays()
+}
+
+class WeatherStationSubject implements Subject{
++ temp: int
++ humidity: int
+}
+
+WeatherStationSubject --> ForecastConditionsObserver
+WeatherStationSubject --> CurrentConditionObserver
+@enduml

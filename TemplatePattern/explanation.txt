@@ -1,0 +1,8 @@
+Used to create a group of subclasses that have to
+execute a similar group of methods
+
+Create an abstract class that contains a method
+
+contains a series of method calls that every subclass object will call
+
+subclass objects can override some of the method calls
